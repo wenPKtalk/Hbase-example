@@ -22,6 +22,7 @@ public class HBaseConnectionTest {
         try {
 
             Table table = HBaseConnection.getTable("US_POPULATION");
+            Assert.assertEquals(table.getName().getNameAsString(),"US_POPULATION");
             System.out.println(table.getName().getNameAsString());
             table.close();
         } catch (IOException ioe) {
