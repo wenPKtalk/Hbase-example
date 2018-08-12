@@ -26,7 +26,7 @@ public class HBaseConnection {
             if (null == configuration) {
                 configuration = HBaseConfiguration.create();
                 //客户端链接hbase只需要zk的地址
-                configuration.set("hbase.zookeeper.quorum", "127.0.0.1:2181");
+                configuration.set("hbase.zookeeper.quorum", "localhost:2181");
 
             }
 

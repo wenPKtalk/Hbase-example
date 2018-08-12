@@ -37,6 +37,7 @@ public class HBaseUtil {
                 columnDescriptor.setMaxVersions(1);//设置版本
                 tableDescriptor.addFamily(columnDescriptor);//表信息添加到HColumnDescriptor上
             });
+            admin.createTable(tableDescriptor);
         } catch (IOException e) {
             e.printStackTrace();
         }
